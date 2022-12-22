@@ -1,0 +1,252 @@
+body {
+    background-image: url(/images/coverPic.jpg);
+
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+}
+
+h1 {
+    grid-column: 1/9;
+    grid-row: 1/2;
+    margin: 20px;
+    text-align: center;
+    font-size: 3rem;
+    color: rgb(175, 36, 36);
+    text-shadow: -2px 2px 0 #000,
+        2px 2px 0 #000,
+        2px -2px 0 #000,
+        -2px -2px 0 #000;
+}
+
+.infoDiv {
+    grid-column: 1/9;
+    grid-row: 2/3;
+    text-align: center;
+}
+
+#infoP {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+#startBtn {
+    width: 170px;
+    height: 40px;
+    margin: 0 auto;
+    background-color: rgb(62, 113, 62);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+#startBtn:hover {
+    transform: scale(1.1);
+    background-color: rgb(46, 92, 46, 0.8);
+    cursor: pointer;
+}
+
+.showTwoCards {
+    grid-column: 3/7;
+    grid-row: 3/7;
+    position: absolute;
+    top: 20%;
+    left: 31%;
+    width: 600px;
+    height: 320px;
+}
+
+.card1,
+.card2 {
+    height: 400px;
+    width: 200px;
+}
+
+.card2 {
+    margin-left: 100px;
+}
+
+.showTwoCards img {
+    border-radius: 5%;
+    box-shadow: 5px 5px 5px 5px rgb(0, 0, 0, 0.5);
+    background-color: rgba(239, 236, 236, 0.9);
+}
+
+
+.user1div,
+.user2div {
+    position: absolute;
+    bottom: 20px;
+    width: 300px;
+    height: 80vh;
+}
+
+.user1div {
+    grid-column: 1/3;
+    grid-row: 3/7;
+    left: 50px;
+    border-right: 5px solid black;
+}
+
+.user2div {
+    grid-column: 7/9;
+    grid-row: 3/7;
+    right: 50px;
+    border-left: 5px solid black;
+    margin-left: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: rgba(142, 88, 142, 0.8);
+    font-size: 2.5rem;
+    text-shadow: -1px 1px 0 #000,
+        1px 1px 0 #000,
+        1px -1px 0 #000,
+        -1px -1px 0 #000;
+}
+
+#takeCardBtnUser1,
+#takeCardBtnUser2 {
+    background-color: rgba(231, 177, 50, 0.8);
+    margin: 10px 0px 10px 100px;
+    font-weight: bold;
+    box-shadow: 2px 2px 2px 2px #666;
+    ;
+}
+
+#takeCardBtnUser1:hover,
+#takeCardBtnUser2:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+#takeCardBtnUser1:active,
+#takeCardBtnUser2:active {
+    transform: translateY(2px);
+    box-shadow: 3px 3px 3px 3px #666;
+}
+
+#user1points,
+#user2points {
+    text-align: center;
+    font-size: 1.4rem;
+    color: rgba(15, 31, 176, 0.9);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+#user1sumOfCards,
+#user2sumOfCards {
+    text-align: center;
+    width: 150px;
+    font-size: 1rem;
+    margin-top: 15px;
+    margin-left: 70px;
+    background-color: rgba(119, 180, 199, 0.8);
+    font-weight: bold;
+    margin-bottom: -15px;
+}
+
+.win {
+    border: 5px solid green;
+    background-color: rgb(124, 252, 0, 0.3);
+}
+
+.backCardImg1,
+.backCardImg2 {
+    margin-top: 40px;
+    margin-left: 25px;
+    cursor: none;
+    border: none;
+    background-color: none;
+    width: fit-content;
+    height: fit-content;
+    box-shadow: 5px 5px 5px 5px rgb(0, 0, 0, 0.5);
+}
+
+.activeBackCardImg:active {
+    transform: translateY(3px);
+}
+
+.hide {
+    display: none;
+}
+
+
+.goLeft {
+    position: fixed;
+    animation: goLeft 1.5s ease-in 1s;
+
+}
+
+.goRight {
+    position: fixed;
+    animation: goRight 1.5s ease-in 1s;
+}
+
+#winnerDiv {
+    z-index: 1;
+    width: 500px;
+    height: 250px;
+    position: absolute;
+    top: 35%;
+    left: 33%;
+    background-color: rgb(78, 168, 78, 0.6);
+    border: 3px solid green;
+}
+
+#winnerDiv h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: rgb(39, 50, 133);
+    text-decoration: underline;
+    margin-top: 10px;
+}
+#winnerDiv p {
+    text-align: center;
+    font-size: 1.5rem;
+}
+#winnerDiv span {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: rgb(118, 36, 36);
+}
+
+#restartBtn {
+    background-color: rgb(151, 108, 28);
+    margin-left: 37%;
+    font-weight: bold;
+}
+#restartBtn:hover {
+    transform: scale(1.1);
+}
+
+@keyframes goLeft {
+    from {
+        bottom: 32%;
+        left: 28%;
+
+    }
+
+    to {
+        bottom: 0;
+        left: 0;
+    }
+
+}
+
+@keyframes goRight {
+    from {
+        bottom: 32%;
+        right: 28%;
+    }
+
+    to {
+        bottom: 0;
+        right: 0;
+    }
+}
